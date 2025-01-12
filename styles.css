@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c, #a439ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: grab;
+}
+
+body:active {
+  cursor: grabbing;
+}
+
+/* Card Container */
+.card-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Individual Card */
+.card {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transform: translateY(0) scale(1);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Card Stacking Effect */
+.card:nth-child(1) {
+  transform: translateY(-250px) scale(0.9);
+  opacity: 0.5;
+}
+
+.card:nth-child(2) {
+  transform: translateY(-125px) scale(0.95);
+  opacity: 0.8;
+}
+
+.card:nth-child(3) {
+  transform: translateY(0px) scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.card:nth-child(4) {
+  transform: translateY(125px) scale(0.95);
+  opacity: 0.8;
+}
+
+.card:nth-child(5) {
+  transform: translateY(250px) scale(0.9);
+  opacity: 0.5;
+}
